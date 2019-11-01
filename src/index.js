@@ -1,3 +1,4 @@
+
 let addToy = false
 let TOYS_URL = "http://localhost:3000/toys"
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -70,15 +71,16 @@ function displayToy (toyArray) {
 
 function createToy(toy){
   let toyId = toy.id
+  console.log("TOY ID:", toy.id)
   let toyDiv = document.createElement("div")
   let toyH2 = document.createElement("h2")
   let toyImage = document.createElement("img")
   let toyP = document.createElement("p")
+  toyP.id = "likeCounts"
   let toyButton = document.createElement("button")
-  toyButton.addEventListener("click", () =>{
-    
-  })
- console.log("In  Create Toy", toy)
+  toyButton.setAttribute("id", "likeButton")
+
+  console.log("In  Create Toy", toy)
   toyH2.textContent = toy['name']
   console.log("toy  name", toy.name)
   toyImage.src = toy.image
@@ -87,15 +89,13 @@ function createToy(toy){
 
   toyDiv.append(toyH2, toyImage, toyP, toyButton)
   console.log("toyDiv", toyDiv)
+
+
+  toyButton.addEventListener('click', () =>{
+     toyP.textContent = (toy.likes++) + " Likes"
+  })
+
   return toyDiv
 }
 
-function attachLikesListener(button_id){
-  likesButton = document.getElementById(button_id)
 
-}
-
-
-function increaseLikes(){
-
-}
