@@ -47,6 +47,24 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "teddy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDyF-wNHFv6jBtoCEs0nvHH35nUXHXC_EvUVKl1l0JPYmCSlmX",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "teddy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDyF-wNHFv6jBtoCEs0nvHH35nUXHXC_EvUVKl1l0JPYmCSlmX",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "teddyTEddy",
+      "image": "",
+      "likes": 0,
+      "id": 11
     }
   ]
 }
