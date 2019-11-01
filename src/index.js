@@ -1,4 +1,4 @@
-
+const LIKES = new Set([])
 let addToy = false
 let TOYS_URL = "http://localhost:3000/toys"
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -89,10 +89,17 @@ function createToy(toy){
 
   toyDiv.append(toyH2, toyImage, toyP, toyButton)
   console.log("toyDiv", toyDiv)
-
-
+  
   toyButton.addEventListener('click', () =>{
-     toyP.textContent = (toy.likes++) + " Likes"
+    if (!LIKES.has(toy.id)) {
+      toy.likes++
+      LIKES.add(toy.id)
+    }else {
+      toy.likes--
+      LIKES.delete(toy.id)
+    }
+    toyP.textContent = (toy.likes) + " Likes"
+
   })
 
   return toyDiv
